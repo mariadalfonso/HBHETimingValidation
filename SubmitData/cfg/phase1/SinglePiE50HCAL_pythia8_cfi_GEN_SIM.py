@@ -106,7 +106,6 @@ process.options.numberOfStreams=cms.untracked.uint32(0)
 
 # customisation of the process.
 
-
 # Automatic addition of the customisation function from SLHCUpgradeSimulations.Configuration.HCalCustoms
 from SLHCUpgradeSimulations.Configuration.HCalCustoms import customise_Hcal2017Full 
 
@@ -116,8 +115,3 @@ process = customise_Hcal2017Full(process)
 # End of customisation functions
 
 # Customisation from command line
-
-# Add early deletion of temporary data products to reduce peak memory need
-from Configuration.StandardSequences.earlyDeleteSettings_cff import customiseEarlyDelete
-process = customiseEarlyDelete(process)
-# End adding early deletion
